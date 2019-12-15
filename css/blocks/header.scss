@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $orange;
+  color: $white;
+  min-height: 43px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.header__title {
+  font-size: 12px;
+  font-weight: 300;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.header__icon {
+  width: 9px;
+  height: 14px;
+}
+
+.header__cross {
+  width: 14px;
+  height: 14px;
+}

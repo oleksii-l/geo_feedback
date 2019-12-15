@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Geo Feedback</title>
+    <link href="css/main.css" rel="stylesheet">
 </head>
+
 <body>
+
+    <div id="map" class="map"></div>
+    <div id="window" class="window"></div>
+
+    <script id="window-template" type="text/x-handlebars-template">
     
+        <header class="header">
+            <img src="img/sign.png" alt="" class="header__icon">
+            <div class="header__title">{{address}}</div>
+            <img src="img/cross.png" alt="" class="header__cross">
+        </header>
+        <div class="feedback">
+            <ul class="feedback__list">
+                <li class="feedback__item">
+                    <div class="feedback__item-top">
+                        <div class="feedback__person">Серегей</div>
+                        <div class="feedback__place">Шоколадница</div>
+                        <div class="feedback__date">26.12.2016</div>
+                    </div>
+                    <div class="feedback__text">Тут одни зомби. Не ходите сюда</div>
+
+                </li>
+            </ul>
+            <div class="feedback__form">
+                <form action="" class="form">
+                    <div class="form__title">ваш отзыв</div>
+                    <div class="form__row">
+                        <label class="form__label">
+                            <input type="text" class="form__input" placeholder="Ваше имя">
+                        </label>
+                    </div>
+                    <div class="form__row">
+                        <label class="form__label">
+                            <input type="text" class="form__input" placeholder="Укажите место">
+                        </label>
+                    </div>
+                    <div class="form__row">
+                        <label class="form__label">
+                            <textarea name="" id="" cols="30" rows="10" class="form__input form__input_textarea"
+                                placeholder="Поделитесь впечатлениями"></textarea>
+                        </label>
+                    </div>
+                    <div class="form__row">
+                        <input type="button" class="form__input form__input_btn" value="Добавить">
+                    </div>
+                </form>
+            </div>
+        </div>
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=30499957-9d2b-428e-ac91-3bc0b03eab69&lang=ru_RU"
+        type="text/javascript">
+        </script>
+    <script src="src/main.js" type="text/javascript"></script>
+
 </body>
+
 </html>

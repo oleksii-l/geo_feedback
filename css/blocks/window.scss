@@ -1,0 +1,11 @@
+.window{
+    width: 380px;
+    border-radius: 5px;
+    display: flexbox;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    display: none;
+    background-color: $white;
+}
+

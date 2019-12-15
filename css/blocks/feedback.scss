@@ -1,0 +1,39 @@
+.feedback {
+    color: $black;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.feedback__list {
+    border-bottom: 1px solid $black;
+}
+
+.feedback__item{
+    margin-top: 15px;
+}
+
+.feedback__item-top {
+    display: flex;
+}
+
+.feedback__person {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.feedback__place {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.feedback__date {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.feedback__text {
+    font-size: 14px;
+    font-weight: 400;
+}

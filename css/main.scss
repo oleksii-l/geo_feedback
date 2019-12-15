@@ -1,0 +1,19 @@
+//colors
+$orange: #ff8663;
+$white: #fff;
+$black: #4f4f4f;
+
+//normalize
+@import "_misc/normalize.scss";
+
+// setups
+@import "_misc/fonts.scss";
+@import "_misc/layout.scss";
+
+// blocks
+@import "blocks/map.scss";
+@import "blocks/window.scss";
+@import "blocks/header.scss";
+@import "blocks/feedback.scss";
+@import "blocks/form.scss";
+
