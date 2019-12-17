@@ -7,8 +7,9 @@ ymaps.ready(init);
 function getAddress(coords) {
     ymaps.geocode(coords).then(function (res) {
         let firstGeoObject = res.geoObjects.get(0);
+        let addr = firstGeoObject.getAddressLine();
 
-        return firstGeoObject.getAddressLine();
+        return new Promise(resolve => resolve(addr));
     });
 }
 
@@ -27,11 +28,19 @@ function init() {
     map.events.add('click', function (e) {
         var coords = e.get('coords');
         let position = e.get('position');
-        let address = getAddress(coords);
+        let address;
 
+        ymaps.geocode(coords).then(function (res) {
+            let firstGeoObject = res.geoObjects.get(0);
+             address = firstGeoObject.getAddressLine();
+        });
+        
         let obj = {
-            address: `${this.address}`
-        }
+            address: `${address}`
+        };
+
+        console.log(obj);
+        console.log(address);
 
         dialogHtml = dialog({
             address: address
@@ -42,7 +51,7 @@ function init() {
         wnd.style.display = 'block';
         wnd.style.left = `${position[0]}px`;
         wnd.style.top = `${position[1]}px`;
-        ;
+
     });
 }
 
