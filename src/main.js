@@ -96,6 +96,13 @@ function renderCluster(placemarks) {
             },
         );
 
+        geoObject.events.add('click', event => {
+            console.log(event);
+            console.log(event.originalEvent.target)
+            console.log(event.get('target'))
+           
+        })
+
         geoObjects.push(geoObject);
     }
 
