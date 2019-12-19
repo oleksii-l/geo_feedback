@@ -15,49 +15,58 @@
     <div id="window" class="window"></div>
 
     <script id="window-template" type="text/x-handlebars-template">
-    
+
         <header class="header">
             <img src="img/sign.png" alt="" class="header__icon">
             <div class="header__title">{{address}}</div>
-            <img src="img/cross.png" alt="" class="header__cross">
+            <img id="close" src="img/cross.png" alt="" class="header__cross">
         </header>
         <div class="feedback">
-            <ul class="feedback__list">
-                <li class="feedback__item">
-                    <div class="feedback__item-top">
-                        <div class="feedback__person">Серегей</div>
-                        <div class="feedback__place">Шоколадница</div>
-                        <div class="feedback__date">26.12.2016</div>
-                    </div>
-                    <div class="feedback__text">Тут одни зомби. Не ходите сюда</div>
-
-                </li>
-            </ul>
+            <div id="feedbacks" class="">
+                <span>Отзывов пока никто не написал....</span>
+                
+            </div>
+            
             <div class="feedback__form">
-                <form action="" class="form">
+                <form id="form" action="" class="form">
                     <div class="form__title">ваш отзыв</div>
                     <div class="form__row">
                         <label class="form__label">
-                            <input type="text" class="form__input" placeholder="Ваше имя">
+                            <input id="name" type="text" class="form__input" placeholder="Ваше имя">
                         </label>
                     </div>
                     <div class="form__row">
                         <label class="form__label">
-                            <input type="text" class="form__input" placeholder="Укажите место">
+                            <input id="place" type="text" class="form__input" placeholder="Укажите место">
                         </label>
                     </div>
                     <div class="form__row">
                         <label class="form__label">
-                            <textarea name="" id="" cols="30" rows="10" class="form__input form__input_textarea"
+                            <textarea name="" id="comment" cols="30" rows="10" class="form__input form__input_textarea"
                                 placeholder="Поделитесь впечатлениями"></textarea>
                         </label>
                     </div>
                     <div class="form__row">
-                        <input type="button" class="form__input form__input_btn" value="Добавить">
+                        <input id="add-feedback" type="button" class="form__input form__input_btn" value="Добавить">
                     </div>
                 </form>
             </div>
         </div>
+</script>
+
+    <script id="reviews-template" type="text/x-handlebars-template">
+    <ul class="feedback__list">
+        {{#each feedbacks}}
+        <li class="feedback__item">
+            <div class="feedback__item-top">
+                <div class="feedback__person">{{this.person}}</div>
+                <div class="feedback__place">{{this.place}}</div>
+                <div class="feedback__date">26.12.2016</div>
+            </div>
+            <div class="feedback__text">{{this.comment}}</div>
+        </li>
+        {{/each}}
+    </ul>
 </script>
 
 
