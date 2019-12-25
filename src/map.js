@@ -114,7 +114,7 @@ const init = () => {
         reviewsBlock.innerHTML = '';
         placemarks.forEach(function (marker) {
             if (marker.coords === coords) {
-                reviewsBlock.innerHTML += reviewReturn(marker.reviews);
+                reviewsBlock.innerHTML += generateReviewItem(marker.reviews);
             }
         });
     }
@@ -130,7 +130,7 @@ const init = () => {
             reviewsBlock.innerHTML = '';
             placemarks.forEach(function (marker) {
                 if (marker.coords == balloonCoords) {
-                    reviewsBlock.innerHTML += reviewReturn(marker.reviews);
+                    reviewsBlock.innerHTML += generateReviewItem(marker.reviews);
                 }
             });
 
