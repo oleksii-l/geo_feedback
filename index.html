@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Geo Feedback</title>
+    <title>Geo feedback</title>
+    <link rel="stylesheet" href="css/main.css">
+    </style>
 </head>
+
 <body>
-    
+    <div id="map" class="map"></div>
+
+    <div class="feedback" id="modal">
+        <header class="header">
+            <div class="header__baloon">
+                <img src="img/sign.png">
+            </div>
+            <a href="#" class="header__title" id="modal-header-title"></a>
+            <div class="header__close" id="modal-close">
+                <img src="img/cross.png" alt="">
+            </div>
+        </header>
+
+        <ul class="reviews" id="reviews">
+            <!--review will be here-->
+        </ul>
+
+        <div class="reviews-form__wrap">
+            <h2 class="reviews-form__title">Ваш отзыв</h2>
+            <form class="reviews-form">
+                <input id="reviews-name" name="name" placeholder="Ваше имя">
+                <input id="reviews-place" name="place" placeholder="Укажите место">
+                <textarea id="reviews-comment" name="comment" placeholder="Поделитесь впечатлениями"></textarea>
+                <button class="reviews-form__btn" id="add-review-btn">Добавить</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=30499957-9d2b-428e-ac91-3bc0b03eab69&lang=ru_RU"
+        type="text/javascript">
+    </script>
+    <script src="src/map.js" type="text/javascript"></script>
 </body>
+
 </html>
